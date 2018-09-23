@@ -55,8 +55,10 @@ class ViewController: UIViewController {
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients(["nirajdev.jha@gmail.com"])
         mailComposerVC.setSubject("Device Diagnostic result")
-        let imageData:Data = UserDefaults.standard.value(forKey: "CAPTUREDPHOTO") as! Data
-        mailComposerVC.addAttachmentData(imageData, mimeType: "image/png", fileName: "capturedPhoto.png")
+        if let imageData = UserDefaults.standard.value(forKey: "CAPTUREDPHOTO"){
+        mailComposerVC.addAttachmentData(imageData as! Data, mimeType: "image/png", fileName: "capturedPhoto.png")
+        }
+    
         mailComposerVC.setMessageBody(body, isHTML: true)
         return mailComposerVC
     }
