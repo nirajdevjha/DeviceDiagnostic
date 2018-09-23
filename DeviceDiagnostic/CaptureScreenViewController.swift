@@ -97,6 +97,7 @@ extension CaptureScreenViewController:AVCapturePhotoCaptureDelegate {
        UserDefaults.standard.set(imageData, forKey: "CAPTUREDPHOTO")
         self.delegate?.cameraResult(isCameraWorking: true)
 //        let image = UIImage(data: imageData)
+        //
         
     }
 }
