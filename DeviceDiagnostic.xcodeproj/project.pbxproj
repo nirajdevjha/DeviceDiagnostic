@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2C090321561A5000933D3A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2C090221561A5000933D3A /* CoreBluetooth.framework */; };
+		9C2C090521561A5A00933D3A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2C090421561A5A00933D3A /* CoreMotion.framework */; };
+		9C2C090721561A6200933D3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2C090621561A6200933D3A /* AVFoundation.framework */; };
+		9C2C09092156279300933D3A /* MotionSensorTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C09082156279300933D3A /* MotionSensorTestViewController.swift */; };
+		9C2C090B2156A73000933D3A /* CaptureScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C090A2156A73000933D3A /* CaptureScreenViewController.swift */; };
+		9C52B75D2154C9BD00E16C62 /* BluetoothTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52B75C2154C9BD00E16C62 /* BluetoothTestViewController.swift */; };
 		9C951FE92153BDD400E61319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C951FE82153BDD400E61319 /* AppDelegate.swift */; };
 		9C951FEB2153BDD400E61319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C951FEA2153BDD400E61319 /* ViewController.swift */; };
 		9C951FEE2153BDD400E61319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C951FEC2153BDD400E61319 /* Main.storyboard */; };
@@ -15,6 +21,7 @@
 		9C951FF62153BDD900E61319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C951FF42153BDD900E61319 /* LaunchScreen.storyboard */; };
 		9C9520012153BDD900E61319 /* DeviceDiagnosticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9520002153BDD900E61319 /* DeviceDiagnosticTests.swift */; };
 		9C95200C2153BDD900E61319 /* DeviceDiagnosticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95200B2153BDD900E61319 /* DeviceDiagnosticUITests.swift */; };
+		9C95201A2153C59800E61319 /* MicSpeakerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9520192153C59800E61319 /* MicSpeakerTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C2C090221561A5000933D3A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9C2C090421561A5A00933D3A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9C2C090621561A6200933D3A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9C2C09082156279300933D3A /* MotionSensorTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSensorTestViewController.swift; sourceTree = "<group>"; };
+		9C2C090A2156A73000933D3A /* CaptureScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureScreenViewController.swift; sourceTree = "<group>"; };
+		9C52B75C2154C9BD00E16C62 /* BluetoothTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTestViewController.swift; sourceTree = "<group>"; };
 		9C951FE52153BDD400E61319 /* DeviceDiagnostic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C951FE82153BDD400E61319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C951FEA2153BDD400E61319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		9C9520072153BDD900E61319 /* DeviceDiagnosticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceDiagnosticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C95200B2153BDD900E61319 /* DeviceDiagnosticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiagnosticUITests.swift; sourceTree = "<group>"; };
 		9C95200D2153BDD900E61319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C9520192153C59800E61319 /* MicSpeakerTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicSpeakerTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2C090721561A6200933D3A /* AVFoundation.framework in Frameworks */,
+				9C2C090521561A5A00933D3A /* CoreMotion.framework in Frameworks */,
+				9C2C090321561A5000933D3A /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C2C090121561A5000933D3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C090621561A6200933D3A /* AVFoundation.framework */,
+				9C2C090421561A5A00933D3A /* CoreMotion.framework */,
+				9C2C090221561A5000933D3A /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C951FDC2153BDD400E61319 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,7 @@
 				9C951FFF2153BDD900E61319 /* DeviceDiagnosticTests */,
 				9C95200A2153BDD900E61319 /* DeviceDiagnosticUITests */,
 				9C951FE62153BDD400E61319 /* Products */,
+				9C2C090121561A5000933D3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +134,10 @@
 				9C951FF42153BDD900E61319 /* LaunchScreen.storyboard */,
 				9C951FF72153BDD900E61319 /* Info.plist */,
 				9C951FEF2153BDD400E61319 /* DeviceDiagnostic.xcdatamodeld */,
+				9C9520192153C59800E61319 /* MicSpeakerTestViewController.swift */,
+				9C52B75C2154C9BD00E16C62 /* BluetoothTestViewController.swift */,
+				9C2C09082156279300933D3A /* MotionSensorTestViewController.swift */,
+				9C2C090A2156A73000933D3A /* CaptureScreenViewController.swift */,
 			);
 			path = DeviceDiagnostic;
 			sourceTree = "<group>";
@@ -196,6 +228,11 @@
 				TargetAttributes = {
 					9C951FE42153BDD400E61319 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9C951FFB2153BDD900E61319 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -259,8 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2C09092156279300933D3A /* MotionSensorTestViewController.swift in Sources */,
+				9C2C090B2156A73000933D3A /* CaptureScreenViewController.swift in Sources */,
+				9C95201A2153C59800E61319 /* MicSpeakerTestViewController.swift in Sources */,
 				9C951FEB2153BDD400E61319 /* ViewController.swift in Sources */,
 				9C951FE92153BDD400E61319 /* AppDelegate.swift in Sources */,
+				9C52B75D2154C9BD00E16C62 /* BluetoothTestViewController.swift in Sources */,
 				9C951FF12153BDD400E61319 /* DeviceDiagnostic.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWS4RMNS4A;
 				INFOPLIST_FILE = DeviceDiagnostic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWS4RMNS4A;
 				INFOPLIST_FILE = DeviceDiagnostic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
