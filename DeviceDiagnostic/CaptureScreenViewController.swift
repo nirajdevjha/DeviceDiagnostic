@@ -31,7 +31,7 @@ class CaptureScreenViewController: UIViewController {
         captureSession.sessionPreset = .medium
         guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
             else {
-                print("Unable to access back camera!")
+                print("Unable to get access to back camera")
                 return
         }
         do {
@@ -44,7 +44,7 @@ class CaptureScreenViewController: UIViewController {
             }
         }
         catch let error  {
-            print("Error Unable to initialize back camera:  \(error.localizedDescription)")
+            print("Error Unable to open back camera  \(error.localizedDescription)")
         }
         
     }
@@ -73,8 +73,8 @@ class CaptureScreenViewController: UIViewController {
         cameraView.layer.addSublayer(cameraPreviewLayer)
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
-            self.cameraPreviewLayer.frame = self.cameraView.bounds
         }
+        self.cameraPreviewLayer.frame = self.cameraView.bounds
     }
 
     //MARK:- Button action methods
@@ -94,10 +94,8 @@ extension CaptureScreenViewController:AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation()
             else { return }
-       UserDefaults.standard.set(imageData, forKey: "CAPTUREDPHOTO")
+        UserDefaults.standard.set(imageData, forKey: "CAPTUREDPHOTO")
         self.delegate?.cameraResult(isCameraWorking: true)
-//        let image = UIImage(data: imageData)
-        //
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }

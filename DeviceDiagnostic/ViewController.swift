@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     func configureMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        let body = "Here are the results of device diagnostics:-<br><br><p>Bluetooth:-\(UserDefaults.standard.bool(forKey: "BLUETOOTHRESULT"))<br>Mic/Speaker:-\(String(describing: UserDefaults.standard.bool(forKey: "MICSPEAKERRESULT")))<br>Device sensors:-\(UserDefaults.standard.bool(forKey: "DEVICESENSORSRESULT"))<br></p>"
+        let body = "Here are the results of device diagnostics:-<br><br><p>Bluetooth is working as expected:- \(UserDefaults.standard.bool(forKey: "BLUETOOTHRESULT"))<br>Mic and Speaker are working as expected:- \(String(describing: UserDefaults.standard.bool(forKey: "MICSPEAKERRESULT")))<br>Device sensors working as expected:- \(UserDefaults.standard.bool(forKey: "DEVICESENSORSRESULT"))<br></p>"
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients(["nirajdev.jha@gmail.com"])
         mailComposerVC.setSubject("Device Diagnostic result")
@@ -85,6 +85,7 @@ class ViewController: UIViewController {
     
     @IBAction func captureScreen(_ sender: Any) {
         let captureVC = CaptureScreenViewController.storyboardInstance()
+        captureVC.delegate = self
         self.navigationController?.pushViewController(captureVC, animated: true)
         
     }
