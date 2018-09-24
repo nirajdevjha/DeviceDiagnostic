@@ -28,6 +28,12 @@ class BluetoothTestViewController: UIViewController {
         super.viewDidLoad()
         formatUI()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.isMovingFromParentViewController{
+            self.delegate?.bluetoothTestResult(isWorking: isBluetoothWorking)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -32,6 +32,12 @@ class MotionSensorTestViewController: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.isMovingFromParentViewController{
+            stopMotionSensors()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -45,6 +51,14 @@ class MotionSensorTestViewController: UIViewController {
         stopBtn.layer.cornerRadius = 20.0
         startBtn.clipsToBounds = true
         stopBtn.clipsToBounds = true
+    }
+    
+    func stopMotionSensors() {
+        motionManager.stopAccelerometerUpdates()
+        motionManager.stopGyroUpdates()
+        motionManager.stopDeviceMotionUpdates()
+        motionManager.stopMagnetometerUpdates()
+        self.delegate?.sensorsTestResult(isAccelorometerWorking: isAccelorometerWorking, isGyroscopeWorking: isGyroscopeWorking, isMagnetometerWorking: isMagnetometerWorking, isdeviceMotionWorking: isdeviceMotionWorking)
     }
     
     //MARK:- public methods
@@ -94,11 +108,7 @@ class MotionSensorTestViewController: UIViewController {
     }
     
     @IBAction func stopAndSubmitTest(_ sender: Any) {
-        motionManager.stopAccelerometerUpdates()
-        motionManager.stopGyroUpdates()
-        motionManager.stopDeviceMotionUpdates()
-        motionManager.stopMagnetometerUpdates()
-        self.delegate?.sensorsTestResult(isAccelorometerWorking: isAccelorometerWorking, isGyroscopeWorking: isGyroscopeWorking, isMagnetometerWorking: isMagnetometerWorking, isdeviceMotionWorking: isdeviceMotionWorking)
+        stopMotionSensors()
         self.navigationController?.popViewController(animated: true)
     }
 }

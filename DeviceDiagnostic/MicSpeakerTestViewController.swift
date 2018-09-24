@@ -16,7 +16,6 @@ protocol MicSpeakerResultDelegate:class  {
 class MicSpeakerTestViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDelegate {
     @IBOutlet weak var recordAudioBtn: UIButton!
     @IBOutlet weak var playAudioBtn: UIButton!
-    
     @IBOutlet weak var submitResultBtn: UIButton!
     
     var isAudioRecordingGranted: Bool!
@@ -33,6 +32,12 @@ class MicSpeakerTestViewController: UIViewController,AVAudioRecorderDelegate,AVA
         super.viewDidLoad()
         formatUI()
         checkRecordPermissions()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.isMovingFromParentViewController{
+           self.delegate?.micSpeakerTestResult(isMicWorking: isMicWorking, isSpeakerWorking: isSpeakerWorking)
+        }
     }
     
     override func didReceiveMemoryWarning() {
